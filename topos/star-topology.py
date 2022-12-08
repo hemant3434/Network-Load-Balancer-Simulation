@@ -59,9 +59,6 @@ def myNetwork():
     if len(sys.argv) == 1:
       print("Runnng default mininet CLI stuff")
       CLI(net)
-    elif sys.argv[1] == 'simple':
-      print("Running a simple test with no load balancing using 1 client and 1 backend")
-      test_simple(net)
     elif sys.argv[1] == 'random':
       print("Running a load balancing test with 3 clients connecting to 3 backend servers via a random load balancing algorithm")
       random_load_balancing(net)

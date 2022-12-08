@@ -13,5 +13,3 @@ for i in range(num_req):
   with open(f'{full_path}/{sys.argv[1]}-log.txt', 'a+') as log:
     log.write(str(resp.elapsed.total_seconds())+'\n')
 
-
-

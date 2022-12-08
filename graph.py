@@ -86,4 +86,4 @@ def graph_tree_topology():
   plt.show()
 
 graph_star_topology()
-# graph_tree_topology()
+graph_tree_topology()

@@ -7,7 +7,7 @@ def random_load_balancing(mininet):
   mininet.get("h8").sendCmd(backend_server)
   mininet.get("h9").sendCmd(backend_server)
 
-  mininet.get("h1").sendCmd("python3 " + full_path + '/server-load-balance.py tree Random &')
+  mininet.get("h1").sendCmd("python3 " + full_path + '/socket-load-balancer.py tree Random &')
 
   mininet.get("h2").sendCmd("python3 " + full_path + '/client.py client-1-tree-random &')
   mininet.get("h3").sendCmd("python3 " + full_path + '/client.py client-2-tree-random &')
@@ -26,7 +26,7 @@ def rr_load_balancing(mininet):
   mininet.get("h8").sendCmd(backend_server)
   mininet.get("h9").sendCmd(backend_server)
 
-  mininet.get("h1").sendCmd("python3 " + full_path + '/server-load-balance.py tree RR &')
+  mininet.get("h1").sendCmd("python3 " + full_path + '/socket-load-balancer.py tree RR &')
 
   mininet.get("h2").sendCmd("python3 " + full_path + '/client.py client-1-tree-RR &')
   mininet.get("h3").sendCmd("python3 " + full_path + '/client.py client-2-tree-RR &')
