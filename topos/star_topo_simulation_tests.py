@@ -16,7 +16,7 @@ def random_load_balancing(mininet):
 
   print("Finished now")
 
-  time.sleep(20)
+  time.sleep(10)
   return
 
 def rr_load_balancing(mininet):
@@ -32,5 +32,5 @@ def rr_load_balancing(mininet):
 
   print("Finished now")
 
-  time.sleep(20)
+  time.sleep(10)
   return

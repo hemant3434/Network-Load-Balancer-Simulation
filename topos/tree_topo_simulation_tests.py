@@ -18,7 +18,7 @@ def random_load_balancing(mininet):
 
   print("Finished now")
 
-  time.sleep(20)
+  time.sleep(10)
   return
 
 def rr_load_balancing(mininet):
@@ -36,5 +36,5 @@ def rr_load_balancing(mininet):
   mininet.get("h6").cmd("python3 " + full_path + '/client.py client-6-tree-RR')
 
   print("Finished now")
-  time.sleep(20)
+  time.sleep(10)
   return
