@@ -1,6 +1,13 @@
 import requests
 import sys
 
+'''
+Very simple client script that sends 50 HTTP GET requests to the load balancer.
+Writes the results to a log file in the data_capture directory whose name should
+be specified by a command line argument
+'''
+
+
 num_req = 50
 node_balancer_ip = "10.0.0.1"
 node_balancer_port = 8081
