@@ -2,10 +2,18 @@
 
 Course project for [CSCD58: Computer Networks](https://utsc.calendar.utoronto.ca/course/cscd58h3)
 
-## Project Description
+## Project Setup
 
-* **Motivation:** Load balancing is a key part to building low latency, highly available systems of the 21st century. Big companies such as google have even implemented [load balancers](https://research.google/pubs/pub44824/) directly integrated with ISP architectures 
-* This project uses [Mininet](https://github.com/mininet/mininet) and creates SDN (software defined network) topologies
+1) Have a virtual machine setup with mininet installed in it. We used [this mininet VM](https://cmsweb.utsc.utoronto.ca/marcelo-ponce/CSCD58/Mininet-VM-SR.zip). Import it in your VM software (VMWare, virtual box, etc.)
+
+
+2) Clone the Repository
+    ``` 
+    git clone https://github.com/hemant3434/Network-Load-Balancer-Simulation.git  
+    ```
+
+3) 
+
 
 
 
