@@ -61,4 +61,4 @@ Course project for [CSCD58: Computer Networks](https://utsc.calendar.utoronto.ca
 * Simple server: **server.py**
   * Serves local directory content
 * Plotting results: **graph.py**
-  * Program uses matplotlib to plot the resutls of the simulations
+  * Program uses matplotlib to plot the results of the simulations
