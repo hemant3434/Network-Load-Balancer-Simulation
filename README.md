@@ -13,7 +13,11 @@ Course project for [CSCD58: Computer Networks](https://utsc.calendar.utoronto.ca
     ```
 
 3) 
+    ```
+    cd Network-Load-Balancer-Simulation/
+    ```
 
+4)
 
 
 
