@@ -1,7 +1,7 @@
 import requests
 import sys
 
-num_req = 100
+num_req = 50
 node_balancer_ip = "10.0.0.1"
 node_balancer_port = 8081
 full_path = '/home/mininet/Network-Load-Balancer-Simulation/data_capture'

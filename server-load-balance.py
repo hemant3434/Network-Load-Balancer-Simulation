@@ -7,15 +7,6 @@ full_path = '/home/mininet/Network-Load-Balancer-Simulation'
 
 PORT = 8081
 
-
-def RoundRobin(cur, choice):
-	next = cur % len(choice)
-	return choice[next]
-
-def Random(choice):
-	next = random.randint(0, len(choice) - 1)
-	return choice[next]
-
 backend_servers_star_topo = []
 with open(f"{full_path}/backend_server_addrs_star_topo.txt", 'r') as addrs:
   for addr in addrs:
@@ -26,9 +17,22 @@ with open(f"{full_path}/backend_server_simple.txt", 'r') as addrs:
   for addr in addrs:
     backend_server_simple.append(addr.strip())
 
+backend_servers_tree_topo = []
+with open(f"{full_path}/backend_server_addrs_tree_topo.txt", 'r') as addrs:
+  for addr in addrs:
+    backend_servers_tree_topo.append(addr.strip())
+
 print(f"Current backend/data servers for star topology: {backend_servers_star_topo}")
+print(f"Current backend/data servers for tree topology: {backend_servers_tree_topo}")
 
 RoundRobin_index = 0
+def RoundRobin(cur, choice):
+	next = cur % len(choice)
+	return choice[next]
+
+def Random(choice):
+	next = random.randint(0, len(choice) - 1)
+	return choice[next]
 
 class MyHandler(http.server.SimpleHTTPRequestHandler):
   def do_GET(self):
@@ -38,6 +42,8 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
       choice_servers = backend_servers_star_topo
     elif (sys.argv[1] == 'simple'):
       choice_servers = backend_server_simple
+    elif (sys.argv[1] == 'tree'):
+      choice_servers = backend_servers_tree_topo
 
     next = None
     if (sys.argv[2] == 'RR'):
